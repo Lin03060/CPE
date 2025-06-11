@@ -7,28 +7,28 @@ using namespace std;
 
 int main() {
     int x; 
-    cin >> x;//¿é¤J¦³´Xµ§´ú¸ê 
+    cin >> x;//è¼¸å…¥æœ‰å¹¾ç­†æ¸¬è³‡ 
     
     while (x--) {
         int r;
-        cin >> r;//¿é¤J¿Ë±­ªº¤H¼Æ 
+        cin >> r;//è¼¸å…¥è¦ªæˆšçš„äººæ•¸ 
 
         vector<int> streets(r);
         for (int i = 0; i < r; ++i) {
-            cin >> streets[i];//¿é¤J¾F©~©~¦íªº¦ì¸m 
+            cin >> streets[i];//è¼¸å…¥é„°å±…å±…ä½çš„ä½ç½® 
         }
 
     
         sort(streets.begin(), streets.end());
-        int median = streets[r / 2]; //´M§ä¤¤¦ì¼Æ 
+        int median = streets[r / 2]; //å°‹æ‰¾ä¸­ä½æ•¸ 
 
        
         int total_distance = 0;
         for (int i = 0; i < r; ++i) {
-            total_distance += abs(streets[i] - median);//­pºâÁ`¶ZÂ÷ 
+            total_distance += abs(streets[i] - median);//è¨ˆç®—ç¸½è·é›¢ 
         }
 
-        cout << total_distance << endl;//¿é¥XÁ`¶ZÂ÷ 
+        cout << total_distance << endl;//è¼¸å‡ºç¸½è·é›¢ 
     }
 
     return 0;
